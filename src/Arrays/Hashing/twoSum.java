@@ -31,4 +31,6 @@ public class twoSum {
         int[] ans= obj.indices(nums,target);
         System.out.println("answer is:"+ Arrays.toString(ans));
     }
+
+
 }
