@@ -1,21 +1,19 @@
 package Tree;
 
-public class countNodes {
-
-    //recursion
-    public int countNodes(TreeNode root) {
+public class heightOfTree {
+    public int height(TreeNode root){
         if(root==null) return 0;
-        return countNodes(root.left) +  countNodes(root.right) + 1;
+        return Math.max(height(root.left),height(root.right))+1;
     }
     public static void main(String[] args) {
         TreeNode leftChild = new TreeNode(9, null, null);
         TreeNode rightChild = new TreeNode(20, new TreeNode(15, null, null), new TreeNode(7, null, null));
         TreeNode root = new TreeNode(3, leftChild, rightChild);
 
-        countNodes obj = new countNodes();
-        int count = obj.countNodes(root);
+        heightOfTree obj = new heightOfTree();
+        int height = obj.height(root);
 
-        System.out.println("Number of nodes in the tree is: " + count);
+        System.out.println("Height of the tree is: " + height);
         //can be done also by BFS
     }
 }
