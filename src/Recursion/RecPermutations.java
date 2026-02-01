@@ -1,7 +1,5 @@
 package Recursion;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class RecPermutations {
@@ -13,19 +11,19 @@ public class RecPermutations {
 
         int i=0;
         RecPermutations obj=new RecPermutations();
-        obj.permutations("",u,i);
+        obj.permutations("",u);
 
     }
-    public void permutations(String p,String u,int i){
+    public void permutations(String p,String u){
         if(u.isEmpty()) {
             System.out.println(p);
             return ;
         }
-        char ch=p.charAt(i);
-        String left=p.substring(0,i);
-        String right=p.substring(i+1);
-        p=left+right;
-        u+=ch;
-        permutations(p,u,i+1);
+        for(int i=0;i<u.length();i++){
+            char ch=u.charAt(i);
+            String left=u.substring(0,i);
+            String right=u.substring(i+1);
+            permutations(p+ch,left+right);
+        }
     }
 }
