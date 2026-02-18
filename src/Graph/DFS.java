@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class GraphList {
+public class DFS {
     public int v;
     public List<List<Integer>> adj;  //can make linked list or arraylist
     public List<List<Pair>> weightList;
@@ -25,7 +25,7 @@ public class GraphList {
 
     }
     //******** constructor *********
-    GraphList(int v){
+    DFS(int v){
         this.v=v;
         adj=new ArrayList<>();
         weightList=new ArrayList<>();
@@ -72,7 +72,7 @@ public class GraphList {
     //*************** main function *****************
 
     public static void main(String[] args){
-        GraphList obj= new GraphList(6);
+        DFS obj= new DFS(6);
         obj.addEdge(0,1,10);
         obj.addEdge(1,2,20);
         obj.addEdge(4,3,40);

@@ -3,12 +3,12 @@ package Graph;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class GraphMatrix {
+public class BFS {
     int v;
     int[][] adj;
 
     //********** constructor *********
-    GraphMatrix(int v){
+    BFS(int v){
         this.v=v;
         adj=new int[v][v];
     }
@@ -42,7 +42,7 @@ public class GraphMatrix {
     //****************************** main function *********************************************
 
     public static void main(String[] args){
-        GraphMatrix obj=new GraphMatrix(5);
+        BFS obj=new BFS(5);
         obj.addEdge(0,1);
         obj.addEdge(1,2);
         obj.addEdge(2,3);
