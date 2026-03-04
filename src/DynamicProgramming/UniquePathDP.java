@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class UniquePathDP {
 
     public int noOfPaths(int sr,int sc,int tr,int tc){
-        int count=0;
+
         int[][] matrix=new int[tr][tc];
         for(sr=0;sr<tr;sr++){
             for(sc=0;sc<tc;sc++){
