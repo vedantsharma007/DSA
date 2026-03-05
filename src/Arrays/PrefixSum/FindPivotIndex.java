@@ -1,6 +1,7 @@
 package Arrays.PrefixSum;
 
 //LC 724 -pivot index is the index from wher the left subarray sum equals to right subarray sum
+//exactly same code for LC 1991 middle index of array
 
 public class FindPivotIndex {
     public int pivotIndex(int[] nums) {
