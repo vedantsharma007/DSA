@@ -22,7 +22,7 @@ public class SubSetsIterative {
             int size=outer.size();
             for(int j=0;j<size;j++){
                 List<Integer> inner=new ArrayList<>(outer.get(j));// have to copy each all existing subsets
-                inner.add(nums[i]);                               //exixts=[] [1] then we have to copy then add nums[i]
+                inner.add(nums[i]);                               //exists=[] [1] then we have to copy then add nums[i]
                 outer.add(inner);                                 //to it then adding this to outer list
             }
         }
