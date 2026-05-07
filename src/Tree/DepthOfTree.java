@@ -1,12 +1,35 @@
 package Tree;
 
 
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class DepthOfTree {
     public int maxDepth(TreeNode root) {
         if(root==null) return 0;
         return Math.max(maxDepth(root.left),maxDepth(root.right))+1;
     }
+
+
+    // *************************** iterative sol ************************************
+//    public int maxDepth(TreeNode root) {
+//        if(root==null) return 0;
+//        int depth=0;
+//        Queue<TreeNode> q=new LinkedList<>();
+//        q.add(root);
+//        while(!q.isEmpty()){
+//            int size=q.size();
+//            for(int i=0;i<size;i++){
+//                TreeNode top=q.poll();
+//                if(top.left!=null) q.add(top.left);
+//                if(top.right!=null) q.add(top.right);
+//            }
+//            depth++;
+//        }
+//        return depth;
+//    }
+
+
     public static void main(String[] args) {
         TreeNode leftChild = new TreeNode(9, null, null);
         TreeNode rightChild = new TreeNode(20, new TreeNode(15, null, null), new TreeNode(7, null, null));
