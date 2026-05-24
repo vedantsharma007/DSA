@@ -1,4 +1,4 @@
-package Arrays.strings;
+package Strings;
 
 public class longestPalindrome {
     public int longestPalindrome(String s) {
@@ -36,6 +36,6 @@ public class longestPalindrome {
         String s= "racecar";
         longestPalindrome obj= new longestPalindrome();
         int ans= obj.longestPalindrome(s);
-        System.out.println("String is palindrome? : "+ ans);
+        System.out.println("Longest palindrome is of length: "+ ans);
     }
 }

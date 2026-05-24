@@ -1,4 +1,4 @@
-package Arrays.strings;
+package Strings;
 
 public class windowSubstring {
     public String minWindow(String s, String t) {
