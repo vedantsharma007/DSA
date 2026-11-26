@@ -8,8 +8,9 @@ public class permutationIterative {
         List<List<Integer>> outer=new ArrayList<>();
         int[] nums={1,2,3};
         int n=nums.length;
-        while(n>1){
-            n=n*(n-1);
+        int count = 1;
+        for(int i = 2; i <= nums.length; i++){
+            count *= i;
         }
         permutationIterative obj=new permutationIterative();
         obj.per(nums,outer,n);
